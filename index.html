@@ -2,156 +2,634 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity</title>
+    <title>Hope Foundation - Making a Difference Together</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/b29cf5c668.js" crossorigin="anonymous"></script>
 </head>
-<body>   
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Charity</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#contact">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#contact">Contact Us</a>
-              </li>
-              
-            </ul>
-            <form class="d-flex">
-              
-              <button class="btn btn-warning btn-lg" type="submit"><a style="text-decoration: none;color:black;" href="https://rzp.io/l/uVrFpeY">Donate</a></button>
-            </form>
-          </div>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="heart-loader">
+                <div class="heart"></div>
+            </div>
+            <p>Loading Hope...</p>
         </div>
-      </nav>
-      <div class="container-img">
-          <div class="row-2">
-          <h1 class="content">Donate</h1>
-          <span class="period">Together we can make a difference
-          </span>
-          </div>
-          <div class="column">
-          <button type="button" class="btn  btn-warning btn-lg"><a style="text-decoration: none;color:black;" href="https://rzp.io/l/uVrFpeY">Donate Now</a></button>
-          <button type="button" class="btn btn-outline-dark btn-lg"><a style="text-decoration:none; color:white;"#contact">Contact Us</a></button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-heart me-2"></i>
+                <span>Hope Foundation</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#causes">Causes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#impact">Impact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-donate ms-2" href="https://rzp.io/l/uVrFpeY">
+                            <i class="fas fa-heart me-1"></i>Donate Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
 
-<section class="row" style="padding-top:30px;padding-bottom:60px;" >
-
-
-          <div class="col-lg-3 col-md-6 mt-3"style="padding-left:40px;">
-          <div class="card" style="width: 18rem; ">
-            <img src="./Images/card-2.png" class="card-img-top" alt="...">
-            <p style="padding:1em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate quaerat maxime inventore</p>
-            <div class="card-body" style="padding-left:80px;">
-              <a href="#" class="btn btn-primary">Donate Now</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                        <h1 class="hero-title">
+                            Together We Can 
+                            <span class="highlight">Make a Difference</span>
+                        </h1>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                            Join us in our mission to bring hope, education, and better lives to communities around the world. Every donation creates ripples of positive change.
+                        </p>
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                            <a href="https://rzp.io/l/uVrFpeY" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-heart me-2"></i>Donate Now
+                            </a>
+                            <a href="#about" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-play me-2"></i>Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-
-          <div class="col-lg-3 col-md-6 mt-3">
-          <div class="card" style="width: 18rem;">
-            <img src="./Images/card-5.jpg" class="card-img-top" alt="...">
-            <p style="padding:1em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate quaerat maxime inventore.</p>
-            <div class="card-body"  style="padding-left:80px;">
-               <a href="#" class="btn btn-primary ">Donate Now</a>
+    <!-- Impact Stats Section -->
+    <section class="impact-stats">
+        <div class="container">
+            <div class="row" data-aos="fade-up">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="13440">0</h3>
+                        <p class="stat-label">Lives Touched</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="2240">0</h3>
+                        <p class="stat-label">Children Educated</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="761">0</h3>
+                        <p class="stat-label">Families Housed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="40">0</h3>
+                        <p class="stat-label">Countries Reached</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          </div>
+        </div>
+    </section>
 
-
-          <div class="col-lg-3 col-md-6 mt-3">
-          <div class="card" style="width: 18rem;">
-            <img src="./Images/card-4.jpg" class="card-img-top" alt="...">
-            <p style="padding:1em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate quaerat maxime inventore.</p>
-            <div class="card-body"  style="padding-left:80px;">
-              <a href="#" class="btn btn-primary">Donate Now</a>
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="Images/about us.jpg" alt="About Us" class="img-fluid rounded">
+                        <div class="experience-badge">
+                            <div class="experience-content">
+                                <span class="experience-number">15+</span>
+                                <span class="experience-text">Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-content">
+                        <h2 class="section-title">
+                            About <span class="highlight">Hope Foundation</span>
+                        </h2>
+                        <p class="section-description">
+                            For over 15 years, we've been dedicated to creating lasting change in communities worldwide through education, healthcare, and sustainable development programs.
+                        </p>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>Transparent fund allocation</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>Direct community impact</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>Sustainable development focus</span>
+                            </div>
+                        </div>
+                        <a href="#causes" class="btn btn-primary btn-lg">See Our Causes</a>
+                    </div>
+                </div>
             </div>
-          </div>
-          </div>
+        </div>
+    </section>
 
-
-          <div class="col-lg-3 col-md-6 mt-3">
-            <div class="card" style="width: 18rem;">
-              <img src="./Images/card-1.jpg" class="card-img-top" alt="...">
-              <p style="padding:1em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate quaerat maxime inventore.</p>
-              <div class="card-body"  style="padding-left:80px;">
-                <a href="#" class="btn btn-primary ">Donate Now</a>
-              </div>
+    <!-- Causes Section -->
+    <section id="causes" class="causes-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">
+                    Our <span class="highlight">Causes</span>
+                </h2>
+                <p class="section-description">Choose a cause that resonates with your heart and make a direct impact</p>
             </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cause-card">
+                        <div class="cause-image">
+                            <img src="Images/card-2.png" alt="Education" class="img-fluid">
+                            <div class="cause-overlay">
+                                <a href="https://rzp.io/l/uVrFpeY" class="btn btn-white">Donate</a>
+                            </div>
+                        </div>
+                        <div class="cause-content">
+                            <h4 class="cause-title">Education for All</h4>
+                            <p class="cause-description">Providing quality education and learning resources to underprivileged children worldwide.</p>
+                            <div class="progress-info">
+                                <div class="progress-text">
+                                    <span class="raised">Raised: $45,000</span>
+                                    <span class="goal">Goal: $60,000</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cause-card">
+                        <div class="cause-image">
+                            <img src="Images/card-5.jpg" alt="Healthcare" class="img-fluid">
+                            <div class="cause-overlay">
+                                <a href="https://rzp.io/l/uVrFpeY" class="btn btn-white">Donate</a>
+                            </div>
+                        </div>
+                        <div class="cause-content">
+                            <h4 class="cause-title">Healthcare Access</h4>
+                            <p class="cause-description">Ensuring basic healthcare services reach remote and underserved communities.</p>
+                            <div class="progress-info">
+                                <div class="progress-text">
+                                    <span class="raised">Raised: $32,000</span>
+                                    <span class="goal">Goal: $50,000</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 64%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cause-card">
+                        <div class="cause-image">
+                            <img src="Images/card-4.jpg" alt="Clean Water" class="img-fluid">
+                            <div class="cause-overlay">
+                                <a href="https://rzp.io/l/uVrFpeY" class="btn btn-white">Donate</a>
+                            </div>
+                        </div>
+                        <div class="cause-content">
+                            <h4 class="cause-title">Clean Water</h4>
+                            <p class="cause-description">Building wells and water systems to provide clean, safe drinking water to communities.</p>
+                            <div class="progress-info">
+                                <div class="progress-text">
+                                    <span class="raised">Raised: $28,500</span>
+                                    <span class="goal">Goal: $40,000</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 71%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cause-card">
+                        <div class="cause-image">
+                            <img src="Images/card-1.jpg" alt="Food Security" class="img-fluid">
+                            <div class="cause-overlay">
+                                <a href="https://rzp.io/l/uVrFpeY" class="btn btn-white">Donate</a>
+                            </div>
+                        </div>
+                        <div class="cause-content">
+                            <h4 class="cause-title">Food Security</h4>
+                            <p class="cause-description">Fighting hunger by providing nutritious meals and sustainable farming solutions.</p>
+                            <div class="progress-info">
+                                <div class="progress-text">
+                                    <span class="raised">Raised: $38,200</span>
+                                    <span class="goal">Goal: $55,000</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 69%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-     </section>
+        </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">
+                    What People <span class="highlight">Say</span>
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"Hope Foundation changed my life. Through their education program, I was able to complete my studies and now I'm helping other children in my community."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h5 class="author-name">Maria Santos</h5>
+                                <span class="author-role">Program Beneficiary</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"I've been donating to Hope Foundation for 5 years. Their transparency and impact reports show exactly how my contributions are making a difference."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h5 class="author-name">John Mitchell</h5>
+                                <span class="author-role">Regular Donor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"Working with Hope Foundation as a volunteer has been incredibly rewarding. Seeing the direct impact on communities is truly inspiring."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h5 class="author-name">Sarah Johnson</h5>
+                                <span class="author-role">Volunteer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-     <!--About us-->
-     <section id="contact" class="row"style="padding-top:40px;background-color:black;color:white;" >
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title text-white">
+                        Stay Updated with Our <span class="highlight">Mission</span>
+                    </h2>
+                    <p class="section-description text-white-50 mb-4">
+                        Subscribe to our newsletter and get the latest updates on our projects and impact stories.
+                    </p>
+                    <div class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">
+                    Get in <span class="highlight">Touch</span>
+                </h2>
+                <p class="section-description">Have questions or want to get involved? We'd love to hear from you.</p>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Visit Us</h5>
+                        <p>198 West 19th Street<br>New York, NY 10011</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email Us</h5>
+                        <p>info.charity@gmail.com<br>support@hopefoundation.org</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Call Us</h5>
+                        <p>+91 7565432345<br>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="col-lg-4 col-md-6 mt-3" style="padding-left:120px;padding-bottom: 70px;">
-         <h3 class="h3-style">About Us</h3>
-         <p style="padding-top:20px;font-weight:100;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam doloremque natus enim quisquam ratione nihil dicta explicabo officiis accusantium? Ipsa perferendis asperiores culpa nihil odit, expedita nemo quia illum voluptatum ducimus distinctio.</p>
-         <ul class="inline">
-           <li><i class="fab fa-twitter"></i></li>
-           <li><i class="fab fa-facebook-square"></i></li>
-           <li><i class="fab fa-instagram-square"></i></li>
-         </ul>
-      </div>
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-content">
+                        <h5 class="footer-title">Hope Foundation</h5>
+                        <p class="footer-description">
+                            Making a difference in communities worldwide through education, healthcare, and sustainable development.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#causes">Causes</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Programs</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Healthcare</a></li>
+                        <li><a href="#">Clean Water</a></li>
+                        <li><a href="#">Food Security</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Support</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Fundraise</a></li>
+                        <li><a href="#">Partner</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Legal</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Transparency</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; 2024 Hope Foundation. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="made-with">Made with <i class="fas fa-heart text-primary"></i> for a better world</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
 
-      <div class="col-lg-4 col-md-6 mt-3" style="padding-left:150px">
-        <h3 class="h3-style">Contact Us</h3>
-        <ul style="padding-top:20px;">
-          <li style="margin-left:-30px;margin-bottom:10px;">
-            <i class="fas fa-map-marker-alt"></i>   
-             <span style="padding-left:15px;">198 West 19th Street</span>
-           
-             </li>
-             <li style="margin-left:-30px;margin-bottom:10px;">
-              <i class="fas fa-envelope"></i>
-              <span style="padding-left:15px;">info.charity@gmail.com</span>
-             </li>
-             <li style="margin-left:-30px;margin-bottom:20px;">
-              <i class="fas fa-phone"></i>
-              <span style="padding-left:15px;">+91 7565432345</span>
-             </li>
-        </ul>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.floor(current).toLocaleString();
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target.toLocaleString();
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Trigger counter animation when section is visible
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const statsSection = document.querySelector('.impact-stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
         
-      </div>
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
 
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-      <div class="col-lg-4 col-md-6 mt-3" style="padding-left:120px">
-       <h3 class="h3-style">Donation</h3>
-       <p style="padding-top:20px;font-weight:100;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste corrupti repudiandae voluptas eligendi quas earum eum aliquid recusandae ratione non?</p>
-       <button type="button" class="btn btn-outline-warning"><a style="text-decoration: none;color:white;" href="https://rzp.io/l/uVrFpeY">Donate Now</a></button>
-      </div>
-</section>
-<footer>
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="#">Charity</a>
-  </div>
-</footer>
+        // Form submissions
+        document.querySelector('.newsletter-form form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+        });
 
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        document.querySelector('.contact-form form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+        });
+    </script>
 </body>
 </html>
